@@ -1,3 +1,3 @@
-def rude_words():
-    pass
 
+def rude_words(sonnets):
+    return sonnets.split()

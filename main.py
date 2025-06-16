@@ -8,11 +8,16 @@ Write a program to report on how many rude words Shakespeare ever used, i.e.:
 
 (I don't know what the actual numbers would be, you'll find out!) https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt'''
 
+import requests
+
 from shakespeare import rude_words
 
 
 def main():
-    rude_word_count = rude_words()
+    url = 'https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt'
+    r = requests.get(url)
+    sonnets = r.text
+    rude_word_count = rude_words(sonnets)
     print(rude_word_count)
 
 
