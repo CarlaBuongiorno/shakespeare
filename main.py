@@ -17,7 +17,8 @@ def main():
     url = 'https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt'
     r = requests.get(url)
     sonnets = r.text
-    rude_word_count = rude_words(sonnets)
+    target_words = ["fuck", "shit", "piss", "zounds"]
+    rude_word_count = rude_words(sonnets, target_words)
     print(rude_word_count)
 
 
