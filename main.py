@@ -19,7 +19,8 @@ def main():
     sonnets = r.text
     target_words = ["fuck", "shit", "piss", "zounds"]
     rude_word_count = rude_words(sonnets, target_words)
-    print(rude_word_count)
+    for rude_word in rude_word_count:
+        print(f'{rude_word[0]}: {rude_word[1]}')
 
 
 if __name__ == '__main__':
